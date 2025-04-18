@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <style>
+        body { font-family: Arial; background: #e2f0d9; text-align: center; padding: 30px; }
+        .container { background: white; padding: 20px; border-radius: 10px; display: inline-block; }
+        input { display: block; margin: 10px auto; padding: 8px; width: 300px; }
+        button { padding: 10px 20px; margin: 10px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Bem-vindo, {{ usuario }}!</h2>
+        
+        <h3>Cadastrar Placa</h3>
+        <form action="/cadastrar_placa" method="post">
+            <input type="text" name="placa" placeholder="Placa" required>
+            <input type="text" name="motorista" placeholder="Nome do Motorista" required>
+            <input type="text" name="veiculo" placeholder="Tipo de Veículo" required>
+            <button type="submit">Cadastrar</button>
+        </form>
+
+        <h3>Consultar Placa</h3>
+        <form action="/consultar_placa" method="post">
+            <input type="text" name="placa" placeholder="Digite a placa" required>
+            <button type="submit">Consultar</button>
+        </form>
+
+        {% if resultado %}
+            <h4>Resultado da consulta:</h4>
+            <p><strong>Placa:</strong> {{ resultado.placa }}</p>
+            <p><strong>Motorista:</strong> {{ resultado.motorista }}</p>
+            <p><strong>Veículo:</strong> {{ resultado.veiculo }}</p>
+        {% endif %}
+
+        <br><br>
+        <a href="/logout"><button>Sair</button></a>
+    </div>
+</body>
+</html>

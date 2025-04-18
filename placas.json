@@ -1,0 +1,22 @@
+{
+    "HEX2203": {
+        "placa": "HEX2203",
+        "motorista": "GENILSON",
+        "veiculo": "Carreta"
+    },
+    "TXT2003": {
+        "placa": "TXT2003",
+        "motorista": "DANIEL",
+        "veiculo": "Truck"
+    },
+    "ACD1235": {
+        "placa": "ACD1235",
+        "motorista": "ROGERIO",
+        "veiculo": "SEMI TRUCK"
+    },
+    "HZX2003": {
+        "placa": "HZX2003",
+        "motorista": "GALDINO",
+        "veiculo": "SEMI TOCO"
+    }
+}

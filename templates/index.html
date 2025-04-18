@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - Portaria Terrinha</title>
+    <style>
+        body { font-family: Arial; text-align: center; background: #f0f0f0; padding: 50px; }
+        .container { background: white; padding: 20px; display: inline-block; border-radius: 10px; }
+        input { display: block; margin: 10px auto; padding: 8px; width: 200px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Bem-vindo ao sistema de portaria da Terrinha Alimentos</h2>
+        {% if erro %}
+            <p style="color: red;">{{ erro }}</p>
+        {% endif %}
+        <form action="/login" method="post">
+            <h3>Login</h3>
+            <input type="text" name="usuario" placeholder="Usuário" required>
+            <input type="password" name="senha" placeholder="Senha" required>
+            <button type="submit">Entrar</button>
+        </form>
+        <hr>
+        <form action="/cadastro" method="post">
+            <h3>Cadastro</h3>
+            <input type="text" name="usuario" placeholder="Novo usuário" required>
+            <input type="password" name="senha" placeholder="Nova senha" required>
+            <button type="submit">Cadastrar</button>
+        </form>
+    </div>
+</body>
+</html>
